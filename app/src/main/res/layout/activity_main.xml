@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="729dp"
+        android:layout_height="409dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_D4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="D4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_D3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="D3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_D6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="D6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_D5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="D5" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_ctrl_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="控制主控端LED" />
+
+            <Button
+                android:id="@+id/button_ctrl_slave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="控制节点端LED" />
+
+            <Button
+                android:id="@+id/button_ctrl_relay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="继电器开关"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="输入文字推送到LED屏"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="AB 欢迎光临 12"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_push_led"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="发送" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
